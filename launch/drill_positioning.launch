@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+	<arg name="namespace" default="drill_positioning" />
+  	<group ns="$(arg namespace)">
+
+
+	<node name="drill_positioning" pkg="drill_positioning" type="drill_positioning" respawn="true" clear_params="true" output="screen">
+  </node>
+  <node name="serial_example" pkg="serial_example" type="serial_example_node" respawn="true" clear_params="true" output="screen">
+</node>
+  
+</group>
+
+</launch>
